@@ -26,6 +26,13 @@ public class PlayerController : MonoBehaviour
 
         while (true)
         {
+            if (gamepad == null)
+            {
+                gamepad = Gamepad.current;
+                yield return null;
+                yield break;
+            }
+
             if (IsInStartPosition(GetMoveLeft()))
             {
                 Debug.Log("Started left row!");
