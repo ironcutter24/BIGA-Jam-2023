@@ -32,12 +32,8 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         var relVel = transform.InverseTransformVector(body.velocity);
-        //relVel.x *= linearDragX;
-        //relVel.y *= linearDragY;
-
         relVel.x = Mathf.Lerp(relVel.x, 0f, linearDragX * Time.deltaTime);
         relVel.y = Mathf.Lerp(relVel.y, 0f, linearDragY * Time.deltaTime);
-
         body.velocity = transform.TransformVector(relVel);
     }
 
@@ -114,6 +110,8 @@ public class PlayerController : MonoBehaviour
             {
                 Debug.Log("Move completed!");
                 setForce(horizontalForce, 10f);
+
+                yield return new WaitUntil(() => getMove().magnitude < .1f);
                 yield break;
             }
 
