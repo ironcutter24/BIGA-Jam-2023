@@ -6,6 +6,15 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
+    [SerializeField, Range(0f, 10f)]
+    float linearDragX = 0f;
+
+    [SerializeField, Range(0f, 10f)]
+    float linearDragY = 0f;
+
+    [SerializeField]
+    float horizontalForce = 60f;
+
     Rigidbody2D body;
     Gamepad gamepad;
 
@@ -19,6 +28,36 @@ public class PlayerController : MonoBehaviour
     {
         StartCoroutine(_ProcessInput());
     }
+
+    private void FixedUpdate()
+    {
+        var relVel = transform.InverseTransformVector(body.velocity);
+        //relVel.x *= linearDragX;
+        //relVel.y *= linearDragY;
+
+        relVel.x = Mathf.Lerp(relVel.x, 0f, linearDragX * Time.deltaTime);
+        relVel.y = Mathf.Lerp(relVel.y, 0f, linearDragY * Time.deltaTime);
+
+        body.velocity = transform.TransformVector(relVel);
+    }
+
+    private void MoveLeft(float force, float torque)
+    {
+        Move(force, -Mathf.Abs(torque));
+    }
+
+    private void MoveRight(float force, float torque)
+    {
+        Move(force, Mathf.Abs(torque));
+    }
+
+    private void Move(float force, float torque)
+    {
+        body.AddRelativeForce(force * Vector2.up, ForceMode2D.Force);
+        body.AddTorque(torque, ForceMode2D.Force);
+    }
+
+    #region Controller inputs
 
     IEnumerator _ProcessInput()
     {
@@ -38,7 +77,8 @@ public class PlayerController : MonoBehaviour
                 Debug.Log("Started left row!");
                 yield return _ProcessRow(
                     GetMoveLeft,
-                    GetAngleLeft
+                    GetAngleLeft,
+                    MoveLeft
                     );
             }
             else if (IsInStartPosition(GetMoveRight()))
@@ -46,7 +86,8 @@ public class PlayerController : MonoBehaviour
                 Debug.Log("Started right row!");
                 yield return _ProcessRow(
                     GetMoveRight,
-                    GetAngleRight
+                    GetAngleRight,
+                    MoveRight
                     );
             }
 
@@ -54,7 +95,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    IEnumerator _ProcessRow(Func<Vector2> getMove, Func<Vector2, float> getAngle)
+    IEnumerator _ProcessRow(Func<Vector2> getMove, Func<Vector2, float> getAngle, Action<float, float> setForce)
     {
         Vector2 move, oldMove;
         oldMove = getMove();
@@ -72,6 +113,7 @@ public class PlayerController : MonoBehaviour
             if (getAngle(move) >= 270f)
             {
                 Debug.Log("Move completed!");
+                setForce(horizontalForce, 10f);
                 yield break;
             }
 
@@ -80,12 +122,12 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    #region Helpers
+
     bool IsInStartPosition(Vector2 move)
     {
         return move.y > .9f && Mathf.Abs(move.x) < .2f;
     }
-
-    #region Inputs
 
     Vector2 GetMoveLeft() { return gamepad.leftStick.ReadValue(); }
 
@@ -106,4 +148,5 @@ public class PlayerController : MonoBehaviour
 
     #endregion
 
+    #endregion
 }
