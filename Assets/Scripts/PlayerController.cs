@@ -15,6 +15,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     float horizontalForce = 60f;
 
+    float torque = 10f;
+
     Rigidbody2D body;
     Gamepad gamepad;
 
@@ -35,6 +37,16 @@ public class PlayerController : MonoBehaviour
         relVel.x = Mathf.Lerp(relVel.x, 0f, linearDragX * Time.deltaTime);
         relVel.y = Mathf.Lerp(relVel.y, 0f, linearDragY * Time.deltaTime);
         body.velocity = transform.TransformVector(relVel);
+    }
+
+    public void OnRowLeft()
+    {
+        MoveLeft(horizontalForce, torque);
+    }
+
+    public void OnRowRight()
+    {
+        MoveRight(horizontalForce, torque);
     }
 
     private void MoveLeft(float force, float torque)
@@ -109,7 +121,7 @@ public class PlayerController : MonoBehaviour
             if (getAngle(move) >= 270f)
             {
                 Debug.Log("Move completed!");
-                setForce(horizontalForce, 10f);
+                setForce(horizontalForce, torque);
 
                 yield return new WaitUntil(() => getMove().magnitude < .1f);
                 yield break;
@@ -119,6 +131,8 @@ public class PlayerController : MonoBehaviour
             yield return null;
         }
     }
+
+    #endregion
 
     #region Helpers
 
@@ -146,5 +160,4 @@ public class PlayerController : MonoBehaviour
 
     #endregion
 
-    #endregion
 }
