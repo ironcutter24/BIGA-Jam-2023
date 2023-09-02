@@ -27,7 +27,7 @@ public class MainMenuUI : MonoBehaviour
     void InitMenu()
     {
         startButton.onClick.AddListener(StartGame);
-        
+        container.gameObject.SetActive(true);
         transform.localPosition = -500f * Vector2.up;
         container.sizeDelta = new Vector2(836f, 150f);
     }

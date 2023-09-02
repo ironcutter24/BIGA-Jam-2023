@@ -37,6 +37,10 @@ public class PlayerController : MonoBehaviour
         relVel.x = Mathf.Lerp(relVel.x, 0f, linearDragX * Time.deltaTime);
         relVel.y = Mathf.Lerp(relVel.y, 0f, linearDragY * Time.deltaTime);
         body.velocity = transform.TransformVector(relVel);
+
+        body.AddForce(1.6f * Vector2.up);
+
+        body.velocity = Vector2.ClampMagnitude(body.velocity, 10f);
     }
 
     #region Input Events
