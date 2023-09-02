@@ -39,6 +39,8 @@ public class PlayerController : MonoBehaviour
         body.velocity = transform.TransformVector(relVel);
     }
 
+    #region Input Events
+
     public void OnRowLeft()
     {
         MoveLeft(horizontalForce, torque);
@@ -49,21 +51,12 @@ public class PlayerController : MonoBehaviour
         MoveRight(horizontalForce, torque);
     }
 
-    private void MoveLeft(float force, float torque)
+    public void OnQuitGame()
     {
-        Move(force, -Mathf.Abs(torque));
+        Application.Quit();
     }
 
-    private void MoveRight(float force, float torque)
-    {
-        Move(force, Mathf.Abs(torque));
-    }
-
-    private void Move(float force, float torque)
-    {
-        body.AddRelativeForce(force * Vector2.up, ForceMode2D.Force);
-        body.AddTorque(torque, ForceMode2D.Force);
-    }
+    #endregion
 
     #region Controller inputs
 
@@ -135,6 +128,22 @@ public class PlayerController : MonoBehaviour
     #endregion
 
     #region Helpers
+
+    private void MoveLeft(float force, float torque)
+    {
+        Move(force, -Mathf.Abs(torque));
+    }
+
+    private void MoveRight(float force, float torque)
+    {
+        Move(force, Mathf.Abs(torque));
+    }
+
+    private void Move(float force, float torque)
+    {
+        body.AddRelativeForce(force * Vector2.up, ForceMode2D.Force);
+        body.AddTorque(torque, ForceMode2D.Force);
+    }
 
     bool IsInStartPosition(Vector2 move)
     {
