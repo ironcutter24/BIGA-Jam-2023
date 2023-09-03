@@ -653,6 +653,46 @@ PrefabInstance:
       propertyPath: m_Splines.Array.data[0].m_MetaData.Array.data[2].m_DistanceToInterpolation.Array.data[29].Distance
       value: 8.505223
       objectReference: {fileID: 0}
+    - target: {fileID: 4417266853117217493, guid: 557e9972b67f9dc449f4f9a2ad68038b, type: 3}
+      propertyPath: m_ScaleOffset.min.x
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4417266853117217493, guid: 557e9972b67f9dc449f4f9a2ad68038b, type: 3}
+      propertyPath: m_ScaleOffset.min.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4417266853117217493, guid: 557e9972b67f9dc449f4f9a2ad68038b, type: 3}
+      propertyPath: m_ScaleOffset.min.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4417266853117217493, guid: 557e9972b67f9dc449f4f9a2ad68038b, type: 3}
+      propertyPath: m_ScaleOffset.setup
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4417266853117217493, guid: 557e9972b67f9dc449f4f9a2ad68038b, type: 3}
+      propertyPath: m_ScaleOffset.randomX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4417266853117217493, guid: 557e9972b67f9dc449f4f9a2ad68038b, type: 3}
+      propertyPath: m_ScaleOffset.randomY
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4417266853117217493, guid: 557e9972b67f9dc449f4f9a2ad68038b, type: 3}
+      propertyPath: m_RotationOffset.max.x
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 4417266853117217493, guid: 557e9972b67f9dc449f4f9a2ad68038b, type: 3}
+      propertyPath: m_RotationOffset.min.x
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 4417266853117217493, guid: 557e9972b67f9dc449f4f9a2ad68038b, type: 3}
+      propertyPath: m_RotationOffset.min.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4417266853117217493, guid: 557e9972b67f9dc449f4f9a2ad68038b, type: 3}
+      propertyPath: m_RotationOffset.setup
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5301634919884408843, guid: 557e9972b67f9dc449f4f9a2ad68038b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1338,6 +1378,10 @@ PrefabInstance:
     - target: {fileID: 1567336597748847906, guid: 557e9972b67f9dc449f4f9a2ad68038b, type: 3}
       propertyPath: m_Splines.Array.data[0].m_MetaData.Array.data[2].m_DistanceToInterpolation.Array.data[29].Distance
       value: 8.505222
+      objectReference: {fileID: 0}
+    - target: {fileID: 4417266853117217493, guid: 557e9972b67f9dc449f4f9a2ad68038b, type: 3}
+      propertyPath: m_RotationOffset.setup
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5301634919884408843, guid: 557e9972b67f9dc449f4f9a2ad68038b, type: 3}
       propertyPath: m_LocalPosition.x
