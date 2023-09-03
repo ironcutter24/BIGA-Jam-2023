@@ -6,6 +6,9 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
+    [SerializeField]
+    Animator rowAnim;
+
     [SerializeField, Range(0f, 10f)]
     float linearDragX = 0f;
 
@@ -136,11 +139,13 @@ public class PlayerController : MonoBehaviour
     private void MoveLeft(float force, float torque)
     {
         Move(force, -Mathf.Abs(torque));
+        rowAnim.SetTrigger("RowLeft");
     }
 
     private void MoveRight(float force, float torque)
     {
         Move(force, Mathf.Abs(torque));
+        rowAnim.SetTrigger("RowRight");
     }
 
     private void Move(float force, float torque)
