@@ -38,9 +38,18 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Water
+    uniqueID: 1177975993
+    locked: 0
+  - name: Border
+    uniqueID: 3161444073
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
   - name: Actor
     uniqueID: 2226823333
+    locked: 0
+  - name: Trees
+    uniqueID: 2618275063
     locked: 0
