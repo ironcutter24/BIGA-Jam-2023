@@ -19,6 +19,8 @@ public class CustomCursor : MonoBehaviour
 
     private void Update()
     {
+        gameObject.SetActive(GameManager.Instance.State == GameState.Menu);
+
         image.sprite = Mouse.current.leftButton.isPressed ? cursorDown : cursorUp;
         transform.position = Mouse.current.position.value;
     }

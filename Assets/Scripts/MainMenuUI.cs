@@ -34,6 +34,8 @@ public class MainMenuUI : MonoBehaviour
 
     void StartGame()
     {
+        GameManager.Instance.SetState(GameState.Rafting);
+
         mySequence.Complete();
         mySequence.PlayBackwards();
     }

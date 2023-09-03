@@ -41,7 +41,14 @@ public class BiomeManager : MonoBehaviour
     {
         if (player.position.y > activeTiles[0].transform.position.y + tileHeight)
         {
-            EnqueueRandomTile();
+            Debug.Log(GameManager.Instance.State);
+
+            switch (GameManager.Instance.State)
+            {
+                case GameState.Menu:    EnqueueTile(GetStraightTile()); break;
+                case GameState.Rafting: EnqueueRandomTile(); break;
+            }
+
             DequeueFirstTile();
         }
     }

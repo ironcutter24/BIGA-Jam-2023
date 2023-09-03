@@ -150,6 +150,9 @@ public class PlayerController : MonoBehaviour
 
     private void Move(float force, float torque)
     {
+        if (GameManager.Instance.State != GameState.Rafting)
+            return;
+
         body.AddRelativeForce(force * Vector2.up, ForceMode2D.Force);
         body.AddTorque(torque, ForceMode2D.Force);
     }
