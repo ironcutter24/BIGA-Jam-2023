@@ -38,7 +38,7 @@ public class PlayerController : MonoBehaviour
         relVel.y = Mathf.Lerp(relVel.y, 0f, linearDragY * Time.deltaTime);
         body.velocity = transform.TransformVector(relVel);
 
-        body.AddForce(1.6f * Vector2.up);
+        body.AddForce(3f * Vector2.up);
 
         body.velocity = Vector2.ClampMagnitude(body.velocity, 10f);
     }
