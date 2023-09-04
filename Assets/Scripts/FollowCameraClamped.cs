@@ -11,6 +11,14 @@ public class FollowCameraClamped : MonoBehaviour
     [SerializeField]
     Transform target;
 
+    [SerializeField]
+    GameObject content;
+
+    private void Start()
+    {
+        content.SetActive(true);
+    }
+
     void FixedUpdate()
     {
         var delta = target.position - transform.position;
