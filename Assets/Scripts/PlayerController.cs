@@ -43,8 +43,16 @@ public class PlayerController : MonoBehaviour
         StartCoroutine(_ProcessInput());
     }
 
+    float yStartPosition = 0f;
+    GameState oldState = GameState.Menu;
     private void FixedUpdate()
     {
+        if (oldState != GameManager.Instance.State)
+        {
+            yStartPosition = transform.position.y;
+        }
+        oldState = GameManager.Instance.State;
+
         var relVel = transform.InverseTransformVector(body.velocity);
         relVel.x = Mathf.Lerp(relVel.x, 0f, linearDragX * Time.deltaTime);
         relVel.y = Mathf.Lerp(relVel.y, 0f, linearDragY * Time.deltaTime);
@@ -70,6 +78,7 @@ public class PlayerController : MonoBehaviour
         body.velocity = Vector2.zero;
         body.angularVelocity = 0f;
 
+        GameManager.Instance.SetScore(transform.position.y - yStartPosition);
         GameManager.Instance.GameOver();
 
         yield return new WaitForSeconds(.4f);

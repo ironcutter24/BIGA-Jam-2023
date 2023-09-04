@@ -9,6 +9,8 @@ public class GameManager : MonoBehaviour
 
     public GameState State { get; private set; } = GameState.Menu;
 
+    public int BestScore { get; private set; } = 0;
+
     private void Awake()
     {
         // Singleton
@@ -21,6 +23,11 @@ public class GameManager : MonoBehaviour
     public void SetState(GameState state)
     {
         State = state;
+    }
+
+    public void SetScore(float yDistance)
+    {
+        BestScore = (int)yDistance * 100;
     }
 
     public void GameOver()
