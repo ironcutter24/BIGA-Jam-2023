@@ -38,7 +38,7 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: Water
+  - name: Background
     uniqueID: 1177975993
     locked: 0
   - name: Border
