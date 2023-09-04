@@ -24,13 +24,24 @@ public class AudioManager : MonoBehaviour
     void Start()
     {
         ambienceEmitter.Play();
+        ResetMusic();
+    }
 
+    public void StartGameMusic()
+    {
+        musicEmitter.SetParameter(mainMenu, 0f);
+    }
+
+    public void ResetMusic()
+    {
+        musicEmitter.Stop();
         musicEmitter.SetParameter(mainMenu, 1f);
+        musicEmitter.SetParameter(gameOver, 0f);
         musicEmitter.Play();
     }
 
-    public void StartGame()
+    public void GameOverMusic()
     {
-        musicEmitter.SetParameter(mainMenu, 0f);
+        musicEmitter.SetParameter(gameOver, 1f);
     }
 }

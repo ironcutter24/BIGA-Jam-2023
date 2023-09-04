@@ -46,6 +46,11 @@ public class PlayerController : MonoBehaviour
         body.velocity = Vector2.ClampMagnitude(body.velocity, 10f);
     }
 
+    public void Death()
+    {
+
+    }
+
     #region Input Events
 
     public void OnRowLeft()
