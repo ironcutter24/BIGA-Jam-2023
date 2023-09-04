@@ -82,6 +82,88 @@ MonoBehaviour:
   m_DeprecatedInstances: []
   m_AutoRefresh: 1
   m_Seed: -13584
+--- !u!1 &3765639253281562402
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 295981393656809832}
+  - component: {fileID: 4614505845753427954}
+  m_Layer: 0
+  m_Name: TreeClusters (External)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &295981393656809832
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3765639253281562402}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5301634919884408843}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4614505845753427954
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3765639253281562402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b74686beb0670a4ea61325c0acf4411, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Container: {fileID: 1567336597748847906}
+  m_ItemsToInstantiate:
+  - prefab: {fileID: 0}
+    Prefab: {fileID: 2421263417702135767, guid: 0df5826ef8a5e154293bad8c616c5cb2, type: 3}
+    probability: 0
+    Probability: 0
+  m_Method: 1
+  m_Space: 0
+  m_Spacing: {x: 0.2, y: 0.5}
+  m_Up: 2
+  m_Forward: 4
+  m_PositionOffset:
+    setup: 1
+    min: {x: -4.2, y: -0.4, z: 0}
+    max: {x: -2.2, y: 0.4, z: 0}
+    randomX: 1
+    randomY: 1
+    randomZ: 0
+    space: 0
+  m_RotationOffset:
+    setup: 0
+    min: {x: 0, y: 0, z: 180}
+    max: {x: 0, y: 0, z: 360}
+    randomX: 0
+    randomY: 0
+    randomZ: 0
+    space: 0
+  m_ScaleOffset:
+    setup: 2
+    min: {x: -0.2, y: -0.2, z: 0}
+    max: {x: 0, y: 0, z: 0}
+    randomX: 1
+    randomY: 1
+    randomZ: 0
+    space: 0
+  m_DeprecatedInstances: []
+  m_AutoRefresh: 1
+  m_Seed: -30926
 --- !u!1 &4517837822865751169
 GameObject:
   m_ObjectHideFlags: 0
@@ -287,6 +369,7 @@ Transform:
   - {fileID: 7014530036728473308}
   - {fileID: 2138833605028923515}
   - {fileID: 4302224296075717197}
+  - {fileID: 295981393656809832}
   - {fileID: 8274168095115962170}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
