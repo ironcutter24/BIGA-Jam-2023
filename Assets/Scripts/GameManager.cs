@@ -35,7 +35,7 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(8f);
 
         SetState(GameState.Menu);
-        SceneManager.LoadScene("MainScene", LoadSceneMode.Single);
         AudioManager.Instance.ResetMusic();
+        SceneManager.LoadScene("MainScene", LoadSceneMode.Single);
     }
 }

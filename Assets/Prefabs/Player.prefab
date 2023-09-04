@@ -234,8 +234,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.06}
-  m_Size: {x: 0.4, y: 1.25}
+  m_Offset: {x: 0, y: -0.025354126}
+  m_Size: {x: 0.3, y: 1.0992918}
   m_Direction: 0
 --- !u!114 &4505642658207751691
 MonoBehaviour:
@@ -283,6 +283,9 @@ MonoBehaviour:
   linearDragX: 6
   linearDragY: 1.6
   horizontalForce: 60
+  boat: {fileID: 6406846559269257459}
+  hat: {fileID: 3115154219957332009}
+  row: {fileID: 7739275051489749304}
 --- !u!1 &5778545781161070100
 GameObject:
   m_ObjectHideFlags: 0

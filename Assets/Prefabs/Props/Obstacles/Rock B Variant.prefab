@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &4772650220525319038
+--- !u!1001 &7702595594454687517
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -10,43 +10,43 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2123093563227498130, guid: 5ce7ebb508ee65949a7dc5d8b836f6b1, type: 3}
       propertyPath: m_Size.x
-      value: 0.49452734
+      value: 0.32873538
       objectReference: {fileID: 0}
     - target: {fileID: 2123093563227498130, guid: 5ce7ebb508ee65949a7dc5d8b836f6b1, type: 3}
       propertyPath: m_Size.y
-      value: 1.0665891
+      value: 0.2725501
       objectReference: {fileID: 0}
     - target: {fileID: 2123093563227498130, guid: 5ce7ebb508ee65949a7dc5d8b836f6b1, type: 3}
       propertyPath: m_Offset.x
-      value: 0.007566929
+      value: 0.004435733
       objectReference: {fileID: 0}
     - target: {fileID: 2123093563227498130, guid: 5ce7ebb508ee65949a7dc5d8b836f6b1, type: 3}
       propertyPath: m_Offset.y
-      value: -0.0030267537
+      value: -0.0029571056
       objectReference: {fileID: 0}
     - target: {fileID: 2123093563227498130, guid: 5ce7ebb508ee65949a7dc5d8b836f6b1, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 0.44021487
+      value: 0.3083836
       objectReference: {fileID: 0}
     - target: {fileID: 2123093563227498130, guid: 5ce7ebb508ee65949a7dc5d8b836f6b1, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 1.0475
+      value: 0.27333334
       objectReference: {fileID: 0}
     - target: {fileID: 3635377216385607279, guid: 5ce7ebb508ee65949a7dc5d8b836f6b1, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -520299812, guid: 8007ddd5c13d70143ba400a2a92c5a49, type: 3}
+      objectReference: {fileID: -326669393, guid: f77d479d2e4f8704e9460926e49a85dc, type: 3}
     - target: {fileID: 5148994262021366161, guid: 5ce7ebb508ee65949a7dc5d8b836f6b1, type: 3}
       propertyPath: m_Name
-      value: Crocodile Variant
+      value: Rock B Variant
       objectReference: {fileID: 0}
     - target: {fileID: 6418350201161651004, guid: 5ce7ebb508ee65949a7dc5d8b836f6b1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 6418350201161651004, guid: 5ce7ebb508ee65949a7dc5d8b836f6b1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 3.48
       objectReference: {fileID: 0}
     - target: {fileID: 6418350201161651004, guid: 5ce7ebb508ee65949a7dc5d8b836f6b1, type: 3}
       propertyPath: m_LocalPosition.z

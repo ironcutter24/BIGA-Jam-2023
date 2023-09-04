@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -20,8 +21,16 @@ public class PlayerController : MonoBehaviour
 
     float torque = 10f;
 
+    [SerializeField]
+    SpriteRenderer boat, hat;
+
+    [SerializeField]
+    MeshRenderer row;
+
     Rigidbody2D body;
     Gamepad gamepad;
+
+    bool isDead = false;
 
     private void Awake()
     {
@@ -41,14 +50,39 @@ public class PlayerController : MonoBehaviour
         relVel.y = Mathf.Lerp(relVel.y, 0f, linearDragY * Time.deltaTime);
         body.velocity = transform.TransformVector(relVel);
 
-        body.AddForce(3f * Vector2.up);
+        if (!isDead)
+            body.AddForce(3f * Vector2.up);
 
         body.velocity = Vector2.ClampMagnitude(body.velocity, 10f);
     }
 
-    public void Death()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Obstacle"))
+        {
+            StartCoroutine(_Death());
+        }
+    }
 
+    IEnumerator _Death()
+    {
+        isDead = true;
+        body.velocity = Vector2.zero;
+        body.angularVelocity = 0f;
+
+        GameManager.Instance.GameOver();
+
+        yield return new WaitForSeconds(.4f);
+        DOTween.To(() => boat.color.a, a => boat.color = ApplyAlpha(boat.color, a), 0f, .2f);
+        yield return new WaitForSeconds(.2f);
+        row.gameObject.SetActive(false);
+        yield return new WaitForSeconds(.3f);
+        DOTween.To(() => hat.color.a, a => hat.color = ApplyAlpha(hat.color, a), 0f, .2f);
+    }
+
+    Color ApplyAlpha(Color c, float a)
+    {
+        return new Color(c.r, c.g, c.b, a);
     }
 
     #region Input Events
@@ -157,6 +191,8 @@ public class PlayerController : MonoBehaviour
     {
         if (GameManager.Instance.State != GameState.Rafting)
             return;
+
+        if (isDead) return;
 
         body.AddRelativeForce(force * Vector2.up, ForceMode2D.Force);
         body.AddTorque(torque, ForceMode2D.Force);
