@@ -58,8 +58,17 @@ public class MainMenuUI : MonoBehaviour
                 .SetEase(Ease.InSine)
             )
             .OnComplete(() => Debug.Log("Completed"))
-            .OnRewind(() => Debug.Log("Rewinded"))
+            .OnRewind(() => StartCoroutine(DisplayTutorial()))
             .SetAutoKill(false)
             .Pause();
+    }
+
+    [SerializeField]
+    GameObject tutorial;
+    IEnumerator DisplayTutorial()
+    {
+        tutorial.SetActive(true);
+        yield return new WaitForSeconds(14f);
+        tutorial.SetActive(false);
     }
 }
