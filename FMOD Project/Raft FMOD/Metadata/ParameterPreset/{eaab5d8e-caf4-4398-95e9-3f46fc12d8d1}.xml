@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="ParameterPreset" id="{eaab5d8e-caf4-4398-95e9-3f46fc12d8d1}">
+		<property name="name">
+			<value>Snake </value>
+		</property>
+		<relationship name="folder">
+			<destination>{8754dcc4-6059-45d3-b8e8-388bfe194d7d}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{50e344d3-49b0-4acd-83d4-0e730e51e887}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{50e344d3-49b0-4acd-83d4-0e730e51e887}">
+		<property name="maximum">
+			<value>2</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

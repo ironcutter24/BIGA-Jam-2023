@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{62e4ffe4-1163-43e6-804c-f2a58d476c1b}">
+		<property name="assetPath">
+			<value>Trans/[Trans] - Snake Attack.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>17.142875</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{735fbfec-7010-44cf-b91a-d6f41933e8ac}</destination>
+		</relationship>
+	</object>
+</objects>

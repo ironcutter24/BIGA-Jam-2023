@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{94578f1b-23dd-4e5c-abb6-e93a12f89a38}">
+		<property name="assetPath">
+			<value>BOAT/Big Water Splash Sound Effect.mp3</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>3.6832653061224492</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{735fbfec-7010-44cf-b91a-d6f41933e8ac}</destination>
+		</relationship>
+	</object>
+</objects>

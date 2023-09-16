@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="ParameterPreset" id="{acdd9898-0dd6-4f52-8d44-617ecc8fd724}">
+		<property name="name">
+			<value>Shark</value>
+		</property>
+		<relationship name="folder">
+			<destination>{8754dcc4-6059-45d3-b8e8-388bfe194d7d}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{9a84b19b-b6f9-4853-8b86-d0b2b07acd7a}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{9a84b19b-b6f9-4853-8b86-d0b2b07acd7a}">
+		<property name="maximum">
+			<value>2</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{979e1a0e-1c84-418d-ae80-178197e2efb2}">
+		<property name="name">
+			<value>Avanti</value>
+		</property>
+		<relationship name="folder">
+			<destination>{8754dcc4-6059-45d3-b8e8-388bfe194d7d}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{63222041-2aab-42eb-88fe-034066e5077e}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{63222041-2aab-42eb-88fe-034066e5077e}">
+		<property name="parameterType">
+			<value>1</value>
+		</property>
+		<property name="maximum">
+			<value>2</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

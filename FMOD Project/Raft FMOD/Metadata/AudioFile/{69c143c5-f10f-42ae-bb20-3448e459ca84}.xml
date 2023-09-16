@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{69c143c5-f10f-42ae-bb20-3448e459ca84}">
+		<property name="assetPath">
+			<value>BOAT/Sound Effects For Ship Creaks   High Qaulity Audio.mp3</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>86.96163265306123</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{735fbfec-7010-44cf-b91a-d6f41933e8ac}</destination>
+		</relationship>
+	</object>
+</objects>
